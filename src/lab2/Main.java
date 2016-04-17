@@ -38,9 +38,7 @@ public class Main {
          
  		
          // Assignment 5: Write code to test map here
-		
-         
-         
+		      
          
  		Comparator<Integer> intcomp = new Comparator<Integer>() {
 			@Override
@@ -52,7 +50,7 @@ public class Main {
 		List<Integer> li1 = new ArrayList<Integer>();
 		List<Integer> li2 = new ArrayList<Integer>();
 		li1.addAll(Arrays.asList(1, 2, 3, 5, 10));
-		li2.addAll(Arrays.asList(11, 12, 100, 1000, 10000));
+		li2.addAll(Arrays.asList(11, 12, 101, 1000, 10000));
 
 		System.out.format("List1 < List2: %b\n", CollectionOps.less(li1, li2, intcomp));
 		System.out.format("List1 > List2: %b\n", CollectionOps.less(li2, li1, intcomp));
@@ -60,11 +58,11 @@ public class Main {
 		
         // Assignment 5: Write code to test filter here
 		CollectionOps.print(li1);
-	//	CollectionOps.print(CollectionOps.filter(new IsEvenFunctor(), li1));
+		CollectionOps.print(CollectionOps.filter(new IsEven(), li1));
 		CollectionOps.print(li1);
 		System.out.println();
 		CollectionOps.print(li2);
-	//	CollectionOps.print(CollectionOps.filter(new IsEvenFunctor(), li2));
+		CollectionOps.print(CollectionOps.filter(new IsEven(), li2));
 		CollectionOps.print(li2);
 		
 		
