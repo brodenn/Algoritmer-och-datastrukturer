@@ -21,12 +21,7 @@ public class CollectionOps {
 
 	public static <T> List<T> reverse(List<T> l) {
 
-		for (int a = 0; a < l.size() / 2; a++) {
-			int b = l.size() - 1 - a;
-			T temp = l.get(a);
-			l.set(a, l.get(b));
-			l.set(b, temp);
-		}
+		Collections.reverse(l);
 		return l;
 	}
 
