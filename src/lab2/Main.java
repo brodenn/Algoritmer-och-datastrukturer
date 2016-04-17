@@ -111,13 +111,12 @@ public class Main {
 		l3.add(-37);
 		l3.add(0);
 		l3.add(18);
-		Collection<Integer> l4 = CollectionOps.filter(new IsEven(),l3);
-		System.out.println();
+		Collection<Integer> l4 = CollectionOps.filter(new IsEven(), l3);
 		System.out.println();
 		System.out.println("filter: ");
 		CollectionOps.print(l4);
-		
-		
+		System.out.println();
+
 		ArrayList<Person> pl = new ArrayList<>();
 		pl.add(new Person("Nisse", "nisse@hipnet.moc", "male", 23));
 		pl.add(new Person("Lisa", "lisa@shipnet.sea", "female", 67));
@@ -127,7 +126,15 @@ public class Main {
 
 		// Assignment 6: Write code using lambdas here
 
-		
-		
+		ArrayList<String> oldWomenEmail = new ArrayList<>();
+		CollectionOps.map(x -> {
+			if (x.getAge() >= 65 && x.getGender() == "female")
+				return oldWomenEmail.add(x.getEmail());
+			else
+				return null;
+		} , pl);
+		System.out.println("lamda: ");
+		CollectionOps.print(oldWomenEmail);
+
 	}
 }
