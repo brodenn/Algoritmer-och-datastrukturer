@@ -13,7 +13,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		ArrayList<String> names = new ArrayList<String>();
-
+		System.out.println("list: ");
 		// Test print for an empty list
 		CollectionOps.print(names);
 		System.out.println();
@@ -28,7 +28,8 @@ public class Main {
 		names.add("c");
 		CollectionOps.print(names);
 		System.out.println();
-
+		System.out.println();
+		System.out.println("reverse: ");
 		// Test the return value from reverse
 		CollectionOps.print(CollectionOps.reverse(names));
 		System.out.println();
@@ -116,7 +117,7 @@ public class Main {
 		System.out.println("filter: ");
 		CollectionOps.print(l4);
 		System.out.println();
-
+		System.out.println();
 		ArrayList<Person> pl = new ArrayList<>();
 		pl.add(new Person("Nisse", "nisse@hipnet.moc", "male", 23));
 		pl.add(new Person("Lisa", "lisa@shipnet.sea", "female", 67));
